@@ -68,7 +68,7 @@ export default function Nav(props) {
           </div>
 
           <div style={styles} className="hamb--menu">
-            <button  className="nav--item--hamb">LAUNCHPAD</button>
+            <button onClick={props.handleClick}   className="nav--item--hamb">LAUNCHPAD</button>
             {/* <button className="nav--item--hamb">STAKING</button>
             <button className="nav--item--hamb">INFO</button> */}
           </div>
