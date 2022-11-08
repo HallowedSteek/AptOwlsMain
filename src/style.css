@@ -1,0 +1,291 @@
+@font-face {
+  font-family: bit;
+  src: url("./fonts/8bit.ttf");
+}
+
+:root {
+  --secondary: #151526;
+  --main: #292a49;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main);
+}
+
+.nav {
+  padding: 10px;
+  background-color: var(--secondary);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: 0px 10px 10px black;
+}
+
+.nav--brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav--brand > h1 {
+  font-family: bit;
+  color: white;
+  font-size: 3rem;
+  margin-top: -20px;
+  letter-spacing: 2px;
+  cursor: default;
+  text-shadow: 7px 2px black;
+}
+
+.nav--items {
+  align-self: center;
+  margin-left: auto;
+}
+
+.nav--items--hamb {
+  align-self: center;
+  margin-left: auto;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10vh;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+.whoAreWe{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items:center;
+  gap: 10vw;
+}
+
+.whoAreWeImg{
+  width: 40vw;
+  max-width: 500px;
+}
+
+.whoAreWeText{
+  color: white;
+  font-size: 40px;
+  text-shadow: 6px 0px black;
+  text-align: center;
+  width: 30vw;
+  max-width: 400px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.headerImg{
+  width: 40vw;
+
+  max-width: 1000px;
+
+  animation: float 3s infinite;
+}
+
+.titleGif{
+  margin: 100px 0px;
+
+  width: 70vw;
+  max-width: 1500px;
+}
+
+.headerDiv{
+  height: 40vh;
+  max-height: 600px;
+
+}
+
+@keyframes float {
+  0%{
+    padding-top: 20px;
+  }
+
+  50%{
+    padding-top: 40px;
+  }
+
+  100%{
+    padding-top: 20px;
+  }
+
+}
+
+
+
+.nav--item-enabled {
+  margin: 10px;
+  padding: 20px;
+  padding-top: 10px;
+
+  background: none;
+  border: none;
+
+  color:#fa8334;
+
+  text-shadow: 7px 2px black;
+  font-family: bit;
+  font-size: 3rem;
+}
+
+.nav--item:hover {
+  cursor: pointer;
+
+  color: #fa8334;
+  text-shadow: 7px 2px black;
+  transition: 0.1s ease-in;
+}
+
+.nav--item {
+  margin: 10px;
+  padding: 20px;
+  padding-top: 10px;
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  text-shadow: 7px 2px black;
+  font-family: bit;
+  font-size: 3rem;
+}
+
+.nav--item--hamb:hover {
+  cursor: pointer;
+  color: #fa8334;
+  transition: 0.1s ease-in;
+}
+
+.nav--item--hamb {
+  margin: 10px;
+  padding: 20px;
+  padding-top: 10px;
+
+  color: white;
+
+  background-color: var(--main);
+
+  text-shadow: 7px 2px black;
+  font-family: bit;
+  font-size: 3rem;
+}
+
+.hamburger {
+  margin-right: 10px;
+  max-width: 60px;
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.hamburger--line {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background-color: #fa8334;
+}
+
+.nav--items--hamb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamb--menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--secondary);
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 60px;
+  right: 0;
+}
+
+.team{
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  gap: 10vw;
+  max-width: 1500px;
+}
+
+.card{
+  height: 100vh;
+  width: 100vw;
+  max-height: 350px;
+  max-width: 250px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: var(--main);
+}
+
+::-webkit-scrollbar-thumb {
+  background:#fa8334; 
+  border-radius: 0px;
+}
+
+
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--secondary);
+  height: 150px;
+  box-shadow: 0px -5px 5px black;
+}
+
+
+.footer--text{
+  color: #686868;
+  letter-spacing: 2px;
+  text-shadow: -5px 0px black;
+}
+
+
+
+@media only screen and (max-width: 950px) {
+  .whoAreWe{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    gap: 100px;
+  }
+
+  .whoAreWeText{
+    width: 50vw;
+    max-width: 500px;
+    overflow: auto;
+  }
+
+  .headerDiv{
+    height: 15vh;
+    max-height: 600px;
+  
+  }
+  .team{
+    flex-direction: column;
+  }
+}
